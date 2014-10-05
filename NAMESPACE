@@ -1,0 +1,2 @@
+export(getnrows, big.read.table, sparkline, sparklines, sparkmat, whatis)
+

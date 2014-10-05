@@ -1,0 +1,15 @@
+b46fbe3710a0155ca451ea46344f2d58 *DESCRIPTION
+3f80e2c34d60010e1a7768ed6fe9da20 *NAMESPACE
+b5b49fb276e63a544de0c8f480ddc890 *R/sparkline.R
+c19c19c61b79d250a9c9a0ec964faf7e *R/sparklines.R
+3cc9f350c9b0e5412276aae597ea25c0 *R/sparkmat.R
+80b927569713652646245e1dd8e90b22 *R/whatis.R
+6d611afc4b63e47db25db4fb90d5d888 *data/YaleEnergy.rda
+48401e4b97c4a0a69ce0a6a4e4f5c035 *data/nasa.rda
+d1270ed941585ed3973df6bef88bf0dc *man/YaleEnergy.Rd
+46ab027d740ff7498e5c94c75939c3c2 *man/YaleToolkit.package.Rd
+e1216b2f90fe8c8f966d906a46bd5a23 *man/nasa.Rd
+2ad56158581f312b1ef3e939cd20edcf *man/sparkline.Rd
+884d0727bd82925b2b3233395cf12385 *man/sparklines.Rd
+0a0d3278903ca5dccee529fe155dba0a *man/sparkmat.Rd
+de6d05ead06038803ad073010cb935e0 *man/whatis.Rd
