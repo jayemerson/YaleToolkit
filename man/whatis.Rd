@@ -40,8 +40,5 @@ of 2004 for their help troubleshooting and developing the function \code{whatis(
   data(iris)
   whatis(iris)
 
-  data(NewHavenResidential)
-  whatis(NewHavenResidential)
-
 }
 \keyword{datasets}

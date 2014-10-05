@@ -6,12 +6,6 @@ Author: John W. Emerson and Walton A. Green
 Maintainer: John W. Emerson <john.emerson@yale.edu>
 Depends:
     grid,
-    lattice,
-    vcd,
-    MASS,
-    colorspace,
-    barcode,
-    gpairs,
     foreach,
     itertools
 Description: This collection of data exploration tools was developed at

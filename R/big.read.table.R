@@ -1,5 +1,18 @@
-
-
+#' @title Read in chunks from a large file with row/column filtering
+#' to obtain a reasonable-sized data.frame. 
+#' @param file the name of the file, obviously
+#' @param nrows the chunk size; consider reducing this if there are
+#' lots of columns
+#' @param sep by default we expect a CSV file
+#' @param header is \code{TRUE} by default
+#' @param row.names I really dislike row names
+#' @param cols for filtering column by name or number (supporting negative indexing)
+#' @param rowfilter a function that is assumed to take a chunk as a
+#' data frame and return a smaller data frame (with fewer rows), separately
+#' from the column filtering.
+#' @param as.is \code{TRUE} by default
+#' @param estimate do a preliminary estimation of the work to be done,
+#' and then have a chance to bail out if it looks like a bad idea
 big.read.table <- function(file, nrows=100000, sep=",",
                            header=TRUE, row.names=NULL,
                            cols=NULL, rowfilter=NULL,

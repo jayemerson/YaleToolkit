@@ -46,11 +46,6 @@ See \url{http://www.edwardtufte.com} for this and other references.
 \keyword{multivariate}
 \keyword{ts}
 
-\seealso{
-  \code{\link{barcode}}, \code{\link{gpairs}}, \code{\link{sparkmat}},
-  \code{\link{sparklines}}, \code{\link{sparkline}},
-  \code{\link{whatis}}, \code{\link{corrgram}}.
-}
 \examples{
   # See individual function documentation for examples.
 }
