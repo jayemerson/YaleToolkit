@@ -1,4 +1,5 @@
-import(grid, foreach)
+import(grid)
+importFrom(foreach, foreach, '%do%')
 importFrom(iterators, iread.table, ireadLines)
 export(getnrows, big.read.table, sparkline, sparklines, sparkmat, whatis)
 
