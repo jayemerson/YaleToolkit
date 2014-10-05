@@ -4,10 +4,9 @@ Date: 2014-10-02
 Title: Data exploration tools from Yale University.
 Author: John W. Emerson and Walton A. Green
 Maintainer: John W. Emerson <john.emerson@yale.edu>
-Depends:
-    grid,
-    foreach,
-    itertools
+Depends: grid, foreach
+Imports:
+    iterators
 Description: This collection of data exploration tools was developed at
     Yale University for the graphical exploration of complex
     multivariate data; barcode and gpairs now have their own
