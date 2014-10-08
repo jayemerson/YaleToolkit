@@ -18,5 +18,5 @@ Current package build status via use of
 
 ## License
 
-The YaleToolkit package is licensed under GPL-2.
+The YaleToolkit package is licensed under LGPL-3.
 

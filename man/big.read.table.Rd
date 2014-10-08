@@ -35,4 +35,10 @@ and then have a chance to bail out if it looks like a bad idea}
 Read in chunks from a large file with row/column filtering
 to obtain a reasonable-sized data.frame.
 }
+\examples{
+data(CO2)
+write.csv(CO2, "CO2.csv", row.names=FALSE)
+x <- big.read.table("CO2.csv", nrows=10)
+head(x)
+}
 

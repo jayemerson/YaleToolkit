@@ -13,6 +13,12 @@
 #' @param as.is \code{TRUE} by default
 #' @param estimate do a preliminary estimation of the work to be done,
 #' and then have a chance to bail out if it looks like a bad idea
+#' @examples
+#' data(CO2)
+#' write.csv(CO2, "CO2.csv", row.names=FALSE)
+#' x <- big.read.table("CO2.csv", nrows=10)
+#' head(x)
+#' @export
 big.read.table <- function(file, nrows=100000, sep=",",
                            header=TRUE, row.names=NULL,
                            cols=NULL, rowfilter=NULL,

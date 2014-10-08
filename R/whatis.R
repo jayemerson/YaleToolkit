@@ -1,5 +1,56 @@
-"whatis" <-
-function(x, var.name.truncate = 20, type.truncate = 14) {
+#' @title Data frame summary
+#' @description Summarize the characteristics of variables (columns)
+#' in a data frame.
+#' @details The function \code{whatis()} provides a basic examination of some
+#' characteristics of each variable (column) in a data frame.
+#' @param x a data frame
+#' @param var.name.truncate maximum length (in characters) for truncation
+#' of variable names.  The default is 20; anything less than 12 is
+#' less than the column label in the resulting data frame and is a
+#' waste of information.
+#' @param type.truncate maximum length (in characters) for truncation of
+#' variable type; \code{14} is the full width, but \code{4} works well
+#' if space is at a premium.
+#' @return A list of characteristics describing the variables in the data
+#' frame, \code{x}. Each component of the list has \code{length(x)}
+#' values, one for each variable in the data frame \code{x}. 
+#' \describe{
+#'   \item{variable.name}{from the \code{names(x)} attribute, possibly
+#'   truncated to \code{var.name.truncate} characters in length.}
+#'   \item{type}{the possibilities include \code{"pure factor"},
+#'   \code{"mixed factor"}, \code{"ordered factor"}, \code{"character"}, 
+#'   and \code{"numeric"}; \code{whatis()} considers the possibility that a 
+#'   factor or a vector could contain character and/or numeric values.  
+#'   If both character and numeric values are present, and if the variable 
+#'   is a factor, then it is called a mixed factor.  If the levels of a 
+#'   factor are purely character or numeric (but not both), it is a pure 
+#'   factor.  Non-factors must then be either character or numeric.}
+#'   \item{missing}{the number of \code{NA}s in the variable.}
+#'   \item{distinct.values}{the number of distinct values in the variable,
+#'   equal to \code{length(table(variable))}.}
+#'   \item{precision}{the number of decimal places of precision.}
+#'   \item{min}{the minumum value (if numeric) or first value (alphabetically)
+#'   as appropriate.}
+#'   \item{max}{the maximum value (if numeric) or the last value
+#'   (alphabetically) as appropriate.}
+#' }
+#' @references Special thanks to John Hartigan and the students of
+#' 'Statistical Case Studies' of 2004 for their help troubleshooting
+#' and developing the function \code{whatis()}.
+#' @seealso See also \code{\link{str}}.
+#' @author John W. Emerson, Walton Green
+#' @examples
+#' mydf <- data.frame(a=rnorm(100),
+#'                    b=sample(c("Cat", "Dog"), 100, replace=TRUE), 
+#'                    c=sample(c("Apple", "Orange", "8"), 100, replace=TRUE),
+#'                    d=sample(c("Blue", "Red"), 100, replace=TRUE))
+#' mydf$d <- as.character(mydf$d)
+#' whatis(mydf)
+#'
+#' data(iris)
+#' whatis(iris)
+#' @export
+"whatis" <- function(x, var.name.truncate = 20, type.truncate = 14) {
  
   if (!is.data.frame(x)) {
     x <- data.frame(x)

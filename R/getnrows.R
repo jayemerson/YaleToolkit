@@ -8,6 +8,7 @@
 #' data(CO2)
 #' write.csv(CO2, "CO2.csv", row.names=FALSE)
 #' getnrows("CO2.csv")
+#' @export
 getnrows <- function(file, n=10000) {
   i <- NULL # To kill off an annoying R CMD check NOTE
   it <- ireadLines(file, n=n)

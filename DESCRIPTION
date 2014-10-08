@@ -1,16 +1,18 @@
 Package: YaleToolkit
-Version: 4.2
-Date: 2014-10-05
+Version: 4.2.1
+Date: 2014-10-08
 Title: Data exploration tools from Yale University.
 Author: John W. Emerson and Walton A. Green
 Maintainer: John W. Emerson <john.emerson@yale.edu>
-Depends: grid
+Depends:
+    grid
 Imports:
     foreach,
     iterators
 Description: This collection of data exploration tools was developed at
     Yale University for the graphical exploration of complex
     multivariate data; barcode and gpairs now have their own
-    packages.
+    packages.  The new big.read.table() provided here may be
+    useful for large files when only a subset is needed.
 License: LGPL-3
 Copyright: (C) 2014 John W. Emerson and Walton Green
